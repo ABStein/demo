@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+
+from demo import views
+from demo.views import students
+# import demo.views.students 
+
+#routing 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('students/', views.students, name='students')
 ]
